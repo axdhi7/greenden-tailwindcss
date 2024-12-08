@@ -11,7 +11,7 @@
     <!--Responsive navbar-->
     <nav class="bg-green-100 p-3 flex items-center justify-between shadow-xl sticky top-0 z-10">
         <h1 class="text-2xl">Greenden</h1>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 w-6 h-6 md:hidden">
+        <svg id="menui" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 w-6 h-6 md:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
           
@@ -27,36 +27,55 @@
             </li>
         </ul>
     </nav>
+    <!--Side navbar-->
+    <div id="sidenavbar" class="bg-green-100 fixed z-20 right-0 transition-all duration-1000"style="width: 50%;height: 100vh;right: -50%;">
+        <div class="text-right p-5">
+            <p id="closenav" class="inline cursor-pointer">X</p>
+        </div>
+        <ul class="flex flex-col gap-10 items-center text-gray-600">
+            <li>
+                <a class="hover:underline hover:text-black" href="./index.html"> Home</a>
+            </li>
+            <li>
+                <a class="hover:underline  hover:text-black" href="./product.html">Products</a>
+            </li>
+            <li>
+                <a class="hover:underline  hover:text-black" href="./contact.html"> contact</a>
+            </li>
+        </ul>
+    </div>
 
         <section class="text-center">
             <h1 class="text-3xl font-bold nt-5 text-center mt-10">Our Products</h1>
             
-            <input type="text" placeholder="Search for a Products..." class="border border-black p-3 m-3" style="width:80% ;">
+            <input type="text" placeholder="Search for a Products..." class="border border-black p-3 m-3" style="width:80% ;" id="search">
         </section>
         <!--products-->
         <section class="p-4 text-center">
             
     
-            <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5 ">
-                <div >
-                    <img src="./images/bestseller1.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
-                    <h1>Rose Plant</h1>
-                    <p>$20</p>
+            <div id="product-container" class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5 ">
+            
+            
+                <div class="text-center" >
+                    <img src="./images/Product_1.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
+                    <h1>jade Plant</h1>
+                    <p>$70</p>
                 </div>
-                <div>
-                    <img src="./images/bestseller_2.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
-                    <h1>RosePlant</h1>
-                    <p>$20</p>
+                <div class="text-center">
+                    <img src="./images/Product_2.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
+                    <h1>Assorted succulents</h1>
+                    <p>$100</p>
                 </div>
-                <div>
-                    <img src="./images/bestseller_3.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
-                    <h1>RosePlant</h1>
-                    <p>$20</p>
+                <div class="text-center">
+                    <img src="./images/Product_3.jpg "class="inline hover:shadow-xl transform hover:translate-y-2 ">
+                    <h1>Calathea</h1>
+                    <p>$50</p>
                 </div>
-                <div>
-                    <img src="./images/bestseller_4.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
-                    <h1>RosePlant</h1>
-                    <p>$20</p>
+                <div class="text-center">
+                    <img src="./images/Product_4.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
+                    <h1>caladium</h1>
+                    <p>$82</p>
                 </div>
             </div>
     
@@ -65,28 +84,120 @@
             
     
             <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5 ">
-                <div >
-                    <img src="./images/bestseller1.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
-                    <h1>Rose Plant</h1>
-                    <p>$20</p>
+                <div class="text-center">
+                    <img src="./images/Product_5.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
+                    <h1>Assorted Foliage Plants</h1>
+                    <p>$49</p>
                 </div>
-                <div>
-                    <img src="./images/bestseller_2.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
-                    <h1>RosePlant</h1>
-                    <p>$20</p>
+                <div class="text-center">
+                    <img src="./images/Product_6.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
+                    <h1>Assorted Plants</h1>
+                    <p>$99</p>
                 </div>
-                <div>
-                    <img src="./images/bestseller_3.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
-                    <h1>RosePlant</h1>
-                    <p>$20</p>
+                <div class="text-center">
+                    <img src="./images/Product_7.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
+                    <h1>Foliage Plants</h1>
+                    <p>$130</p>
                 </div>
-                <div>
-                    <img src="./images/bestseller_4.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
-                    <h1>RosePlant</h1>
-                    <p>$20</p>
+                <div class="text-center">
+                    <img src="./images/Product_8.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
+                    <h1>RosePlants</h1>
+                    <p>$30</p>
                 </div>
             </div>
     
         </section>
+
+        <section class="p-4 text-center">
+            
+    
+            <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5 ">
+                <div class="text-center">
+                    <img src="./images/Product_9.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
+                    <h1>Norfolk Island Pine</h1>
+                    <p>$200</p>
+                </div>
+                <div class="text-center">
+                    <img src="./images/Product_10.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
+                    <h1>Bird nest Fern</h1>
+                    <p>$175</p>
+                </div>
+                <div class="text-center">
+                    <img src="./images/Product_11.jpg "class="inline hover:shadow-xl transform hover:translate-y-2 ">
+                    <h1>Norfolk Pine</h1>
+                    <p>$250</p>
+                </div>
+                <div class="text-center">
+                    <img src="./images/Product_12.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
+                    <h1>Araucaria Heterophylla</h1>
+                    <p>$199</p>
+                </div>
+            </div>
+    
+        </section>
+        <section class="p-4 text-center">
+            
+    
+            <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5 ">
+                <div class="text-center" >
+                    <img src="./images/Product_13.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
+                    <h1>Araucaria Heterophylla</h1>
+                    <p>$55</p>
+                </div>
+                <div class="text-center">
+                    <img src="./images/Product_14.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
+                    <h1>Assorted Plants</h1>
+                    <p>$25</p>
+                </div>
+                <div class="text-center">
+                    <img src="./images/Product_15.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
+                    <h1>RosePlant</h1>
+                    <p>$20</p>
+                </div>
+                <div class="text-center">
+                    <img src="./images/Product_16.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
+                    <h1>Aloe Vera</h1>
+                    <p>$49</p>
+                </div>
+            </div>
+    
+        </section>
+
+        <section class="p-4 text-center">
+            
+    
+            <div class="grid grid-cols-2 md:grid-cols-4 mt-5 gap-5 ">
+                <div class="text-center">
+                    <img src="./images/Product_17.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
+                    <h1>Zanzibar Gem</h1>
+                    <p>$99</p>
+                </div>
+                <div class="text-center">
+                    <img src="./images/Product_18.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
+                    <h1>Bird of Paradise</h1>
+                    <p>$209</p>
+                </div>
+                <div class="text-center">
+                    <img src="./images/Product_19.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
+                    <h1>Areca palm</h1>
+                    <p>$199</p>
+                </div>
+                <div class="text-center">
+                    <img src="./images/Product_20.jpg" class="inline hover:shadow-xl transform hover:translate-y-2 ">
+                    <h1>Monstera Deliciosa</h1>
+                    <p>$209</p>
+                </div>
+            </div>
+    
+        </section>
+        <section class="bg-green-100 p-10 flex flex-col gap-5">
+            <h1 class="text-3xl font-semibold">GreenDen</h1>
+            <p>Our mission is to inspire people to cultivate their own green spaces—whether it's a cozy corner in your home, a vibrant balcony garden</p>
+            <P>@2024 GreenDay.com</P>
+    
+        </section>
+<script src="product.js"></script>
+</body>
+</html>
     
     
